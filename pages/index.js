@@ -1,10 +1,11 @@
-import styled from 'styled-components'
-
-const Title = styled.h1`
-  font-size: 50px;
-  color: ${({ theme }) => theme.colors.primary};
-`
+import Cabecalho from "../src/components/commons/Cabecalho";
+import Capa from "../src/components/commons/Capa";
 
 export default function Home() {
-  return <Title>Começando o desafio do bootcamp ;)</Title>
+  return (
+    <>
+      <Capa/>
+      <Cabecalho/>
+    </>
+  )
 }
