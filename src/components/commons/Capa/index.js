@@ -6,19 +6,19 @@ const Title = styled.h1`
 `
 
 const Box = styled.div`
-    height: 100vh;
+    height: 90vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background: url("/images/planta.svg") no-repeat right bottom;
+    background: url("/images/planta.svg") no-repeat center bottom;
 `
 
 export default function Capa() {
     return (
         <Box>
             <Title>
-                Mary Elizabeth
+                Julius Caesar
             </Title>
             <p>
                 Portfolio
