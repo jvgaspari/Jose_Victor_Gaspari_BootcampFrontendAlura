@@ -8,12 +8,15 @@ const Projetos = styled.div`
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: lightcoral;
+    background-image: linear-gradient( #2c304a , #fff);
+    color: #fff;
+    font-family: 'Prompt', sans-serif;
 `;
 
 const SectionCards = styled.div`
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
 `;
 
 export default function WrapperProjetos() {
@@ -21,9 +24,9 @@ export default function WrapperProjetos() {
         <Projetos>
             <SectionTitle/>
             <SectionCards>
-                <Card/>
-                <Card/>
-                <Card/>
+                <Card title="Alpha"/>
+                <Card title="Beta"/>
+                <Card title="Gamma"/>
             </SectionCards>
         </Projetos>
     )

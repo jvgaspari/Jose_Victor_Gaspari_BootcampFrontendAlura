@@ -4,24 +4,36 @@ const WrapperCabecalho = styled.div`
     display: flex;
     justify-content: space-around;
     align-items: center;
-    background-color: yellow;
+    background-color: #09090D;
+    color: #d7d6d7;
+    position: fixed;
+    width: 100%;
+
+    h2 {
+        font-weight: bold;
+        color: #fff;
+    }
 `;
 
 const NavBar = styled.nav`
     display: flex;
     list-style-type: none;
+    li {
+        margin-left: 32px;
+        cursor: pointer;
+    }
 `;
 
 export default function Cabecalho() {
     return (
         <WrapperCabecalho>
-            <p>Logo</p>
+            <h2>£</h2>
             <NavBar>
                 <li>
-                    Sobre mim
+                    About me
                 </li>
                 <li>
-                    Contato
+                    Contact
                 </li>
             </NavBar>
         </WrapperCabecalho>

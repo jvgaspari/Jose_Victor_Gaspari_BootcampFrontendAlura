@@ -1,9 +1,9 @@
 export default function FooterIcon() {
     return (
         <>
-            <i>Github</i>
-            <i>Face</i>
-            <i>Twitter</i>
+            <i class="fab fa-github"/>
+            <i class="fab fa-facebook"/>
+            <i class="fab fa-twitter"/>
         </>
     )
 }
