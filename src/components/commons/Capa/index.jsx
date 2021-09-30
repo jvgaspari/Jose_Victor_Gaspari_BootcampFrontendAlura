@@ -1,19 +1,9 @@
 import styled from 'styled-components';
+import Text from '../../foundation/Text';
 
 const Title = styled.div`
 
     font-size: 18px;
-    font-family: 'Prompt', sans-serif;
-
-  h1{
-      font-size: 64px;
-      color: #FFF;
-      font-weight: bold;
-  }
-
-  p{
-    color: #A4A4A4;
-  }
 `
 
 const Box = styled.div`
@@ -36,10 +26,14 @@ export default function Capa() {
     return (
         <Box>
             <Title>
-                <h1>Digital Bot</h1>
-                <p>
-                    Web Developer - Portfolio
-                </p>
+                <Text
+                >
+                    Digital Bot
+                </Text>
+                <Text
+                >
+                    Fullstack Web Developer - Portfolio
+                </Text>
             </Title>
             <img/>
         </Box>

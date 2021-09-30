@@ -1,4 +1,3 @@
-import FooterIcon from "../FooterIcon";
 import styled from "styled-components";
 
 const WrapperFooter = styled.div`
@@ -23,7 +22,9 @@ const WrapperFooter = styled.div`
 export default function Footer() {
     return (
         <WrapperFooter>
-            <FooterIcon/>
+            <i class="fab fa-github"/>
+            <i class="fab fa-facebook"/>
+            <i class="fab fa-twitter"/>
         </WrapperFooter>
     )
 }
