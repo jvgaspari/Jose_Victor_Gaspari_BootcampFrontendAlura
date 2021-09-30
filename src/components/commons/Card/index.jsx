@@ -1,4 +1,6 @@
 import styled from "styled-components"
+import Text from "../../foundation/Text";
+import PropTypes from 'prop-types';
 
 const WrapperCard = styled.div`
     background-color: lightcyan;
@@ -11,25 +13,32 @@ const WrapperCard = styled.div`
     color: black;
 `;
 
-const CardImage = styled.div`
+const CardImage = styled.img`
     height: 80%;
     width: 100%;
-    background-color: blue;
     border-radius: 12px 12px 0 0;
 `;
 
-const CardTitle = styled.p`
-    text-align: center;
-    font-weight: bold;
-`;
-
-export default function Card({ title }) {
+export default function Card({ title, url }) {
     return (
         <WrapperCard>
-            <CardImage/>
-            <CardTitle>
+            <CardImage
+                src={url}
+                alt="imagem do projeto"
+            />
+            <Text>
                 {title}
-            </CardTitle>
+            </Text>
         </WrapperCard>
     )
+}
+
+Card.propTypes = {
+    title: PropTypes.string,
+    url: PropTypes.string,
+}
+
+Card.defaultProps = {
+    title: 'undefined',
+    url: '',
 }
