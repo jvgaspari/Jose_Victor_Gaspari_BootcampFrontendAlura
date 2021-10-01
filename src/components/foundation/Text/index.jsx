@@ -1,4 +1,5 @@
 import React from 'react';
+import get from "lodash/get";
 import styled, { css } from 'styled-components';
 import PropTypes from 'prop-types';
 import { propToStyle } from '../../../theme/utils/propToStyle';
@@ -36,10 +37,34 @@ export const TextStyleVariantsMap = {
     `,
 }
 
+const TextModify = css`
+    color: ${(props) => get(props.theme, `colors.${props.color}.color`)};
+`;
+
+const TextDefault = css`
+    color: ${function(props){
+        return props.theme.colors.primary.main.color
+    }};
+`;
+
 const TextBase = styled.span`
     ${(props) => TextStyleVariantsMap[props.variant]}
+    ${function(props) {
+        console.log('props', props)
+        if(props.color) {
+            return TextModify;
+        }
+        return TextDefault;
+    }}
+
+
     ${propToStyle('textAlign')}
     ${propToStyle('margin')}
+    ${propToStyle('alignSelf')}
+    ${propToStyle('height')}
+    ${propToStyle('display')}
+    ${propToStyle('justifyContent')}
+    ${propToStyle('alignItems')}
 `;
 
 export default function Text({ tag, variant, children, ...props }) {

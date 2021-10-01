@@ -20,11 +20,11 @@ const CardBox = styled.div`
 export default function Projetos() {
     return (
         <ProjetosWrapper>
-            <p>My projects</p>
+            <p>My team</p>
             <CardBox>
                 <Card 
-                    title="Matrix"
-                    url="/images/matrix.jpg"
+                    title="Copperbottom"
+                    url="/images/robots.jpg"
                 />
                 <Card 
                     title="Chappie"

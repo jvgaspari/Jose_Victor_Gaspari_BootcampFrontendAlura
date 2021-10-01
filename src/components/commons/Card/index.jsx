@@ -3,7 +3,6 @@ import Text from "../../foundation/Text";
 import PropTypes from 'prop-types';
 
 const WrapperCard = styled.div`
-    background-color: lightcyan;
     box-shadow: 9px 9px 24px 4px rgba(0,0,0,0.59);
     border-radius: 12px;
     width: 300px;
@@ -14,7 +13,7 @@ const WrapperCard = styled.div`
 `;
 
 const CardImage = styled.img`
-    height: 80%;
+    height: 320px;
     width: 100%;
     border-radius: 12px 12px 0 0;
 `;
@@ -26,7 +25,13 @@ export default function Card({ title, url }) {
                 src={url}
                 alt="imagem do projeto"
             />
-            <Text>
+            <Text
+                height="80px"
+                display= "flex"
+                justifyContent= "center"
+                alignItems= "center"
+                color="secundary.main"
+            >
                 {title}
             </Text>
         </WrapperCard>
